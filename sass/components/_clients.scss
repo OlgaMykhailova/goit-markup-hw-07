@@ -10,9 +10,7 @@
   margin-right: 30px;
 }
 .clients__thumb {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @extend %centeredFlex;
 
   width: 170px;
   height: 92px;

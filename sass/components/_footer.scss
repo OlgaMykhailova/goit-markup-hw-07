@@ -49,9 +49,7 @@
   display: flex;
 }
 .join__link {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @extend %centeredFlex;
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
   width: 44px;
@@ -104,9 +102,7 @@
   }
 }
 .subscription__button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @extend %centeredFlex;
 
   padding: 9px 29px;
 }
