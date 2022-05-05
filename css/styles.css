@@ -127,6 +127,10 @@ a {
 .header {
   border-bottom: 1px solid #ececec;
 }
+.header__section {
+  display: flex;
+  align-items: center;
+}
 
 /* Логотип */
 .logo {
@@ -170,10 +174,7 @@ a {
 .contacts__link:focus {
   color: var(--accent-color);
 }
-.header__section {
-  display: flex;
-  align-items: center;
-}
+
 .nav__list {
   display: flex;
 }
@@ -182,6 +183,16 @@ a {
 }
 .nav__item:not(:last-child) {
   margin-right: 50px;
+}
+.nav__link--current::after {
+  content: "";
+  position: absolute;
+  display: block;
+  background-color: var(--accent-color);
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  top: calc(100% - 3px);
 }
 .contacts {
   display: flex;
@@ -209,16 +220,7 @@ a {
   display: flex;
   align-items: center;
 }
-.nav__link--current::after {
-  content: "";
-  position: absolute;
-  display: block;
-  background-color: var(--accent-color);
-  width: 100%;
-  height: 4px;
-  border-radius: 2px;
-  top: calc(100% - 3px);
-}
+
 /* Главная страница */
 
 /* Герой */
@@ -677,10 +679,10 @@ margin-bottom: 50px;
   flex-wrap: wrap;
   flex-basis: calc((100% - 90px) / 3);
 }
-.card:not(:nth-child(3n)) {
+.projects__card:not(:nth-child(3n)) {
   margin-right: 30px;
 }
-.card:not(:nth-last-child(-n + 3)) {
+.projects__card:not(:nth-last-child(-n + 3)) {
   margin-bottom: 30px;
 }
 .card {
